@@ -24,13 +24,12 @@ Asistente IA especializado en generar fórmulas avanzadas de Excel con interfaz 
 - API de OpenRouter para IA
 - Diseño responsive con media queries
 
+## TODO: 
+- La clave debería llamarse desde un .env para mas seguridad. Esto código esta en  modo demostración.
+- Mejorar interfaz resposiva en móviles.
+
 ## 📦 Instalación
 ```bash
 git clone https://github.com/aisurf3r/ExcelEncia.git
 cd excel-enciencia
 Reemplaza por tu Openrouter API KEY en script.js
-
-TODO: 
-- La clave debería llamarse desde un .env para mas seguridad. Esto código esta en  modo demostración.
-- Mejorar interfaz resposiva en móviles.
-
