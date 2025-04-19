@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Excel Encia - Asistente experto en fórmulas de Excel">
+  <title>Excel Encia - Tu experto en fórmulas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>📊</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="excel-icon">&#128290;</div>
+    <div class="chat-header">
+      Excel Encia
+      <span class="clear-icon" onclick="clearChat()">&#128465;</span>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Mande patrón..." />
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
+    <div class="examples-container">
+      <div class="example-row">
+        <div class="example-card" onclick="useExample('Necesito una fórmula BUSCARV para encontrar datos de un cliente')">
+          <h4>BUSCARV</h4>
+          <p>Buscar y extraer datos de una tabla basado en un valor de referencia</p>
+        </div>
+        <div class="example-card" onclick="useExample('¿Cómo puedo hacer una fórmula SI.CONJUNTO para múltiples condiciones?')">
+          <h4>SI.CONJUNTO</h4>
+          <p>Evaluar múltiples condiciones para decidir el resultado</p>
+        </div>
+        <div class="example-card" onclick="useExample('Necesito una fórmula para consolidar datos con SUMAPRODUCTO')">
+          <h4>SUMAPRODUCTO</h4>
+          <p>Multiplicar matrices y sumar los resultados para cálculos avanzados</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="example-card" onclick="useExample('¿Cómo usar INDICE y COINCIDIR para buscar datos en una tabla?')">
+          <h4>INDICE/COINCIDIR</h4>
+          <p>Buscar datos en tablas de forma dinámica y flexible</p>
+        </div>
+        <div class="example-card" onclick="useExample('Necesito concatenar textos de varias celdas con CONCATENAR')">
+          <h4>CONCATENAR</h4>
+          <p>Unir texto de diferentes celdas en una sola</p>
+        </div>
+        <div class="example-card" onclick="useExample('¿Cómo puedo hacer un rango dinámico con DESREF?')">
+          <h4>DESREF</h4>
+          <p>Crear referencias dinámicas a rangos de celdas</p>
+        </div>
+      </div>
+      <div class="example-row">
+        <div class="example-card" onclick="useExample('¿Cómo usar la función FILTRAR para extraer datos según criterios?')">
+          <h4>FILTRAR</h4>
+          <p>Extraer datos que cumplan con criterios específicos</p>
+        </div>
+        <div class="example-card" onclick="useExample('Necesito calcular días laborables entre dos fechas con DIAS.LAB')">
+          <h4>DIAS.LAB</h4>
+          <p>Calcular días laborables entre dos fechas</p>
+        </div>
+        <div class="example-card" onclick="useExample('¿Cómo convertir números a texto con formato usando la función TEXTO?')">
+          <h4>TEXTO</h4>
+          <p>Convertir números y fechas a texto con formato personalizado</p>
+        </div>
+      </div>
+    </div>
+    <footer class="app-footer">
+      <a href="https://github.com/aisurf3r/ExcelEncia.git" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>GitHub
+      </a>
+      <span class="made-with-love">Made with ❤️ by aisurf3r</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

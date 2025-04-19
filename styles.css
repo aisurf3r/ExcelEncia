@@ -1,0 +1,274 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.chat-container {
+  width: 700px;
+  background-color: #2d2d44;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.excel-icon {
+  font-size: 50px;
+  color: #6c5ce7;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.chat-header {
+  background-color: #3a3a52;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.chat-header .clear-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  right: 20px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  max-height: 300px;
+  width: 100%;
+}
+
+.message.user {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.message.bot {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.message.user .content {
+  background-color: rgba(76, 175, 80, 0.8);
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 70%;
+  color: white;
+  position: relative;
+}
+
+.message.bot .content {
+  background-color: rgba(108, 92, 231, 0.8);
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 70%;
+  color: white;
+  position: relative;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #444;
+  width: 100%;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 15px;
+  background-color: #3a3a52;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.chat-input button {
+  padding: 15px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chat-input button:hover {
+  background-color: #5a4ec9;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(108, 92, 231, 0.3);
+  border-top-color: #6c5ce7;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.examples-container {
+  width: 100%;
+  border-top: 1px solid #444;
+  padding: 15px;
+}
+
+.example-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.example-card {
+  background-color: #3a3a52;
+  padding: 12px;
+  border-radius: 8px;
+  width: 30%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.example-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.example-card h4 {
+  margin: 0 0 8px 0;
+  color: #6c5ce7;
+  font-size: 14px;
+}
+
+.example-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #ddd;
+}
+
+.excel-formula {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  cursor: pointer;
+  color: #7bf542;
+  border: 1px solid #444;
+  display: inline-block;
+  margin: 3px 0;
+  position: relative;
+}
+
+.excel-formula:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.excel-formula:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.copy-tooltip {
+  position: absolute;
+  background-color: #222;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.copy-tooltip.visible {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 95%;
+    height: 90vh;
+  }
+  
+  .example-row {
+    flex-direction: column;
+  }
+  
+  .example-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+.app-footer {
+  width: 100%;
+  padding: 15px;
+  background-color: #3a3a52;
+  color: #ddd;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+}
+.app-footer a {
+  color: #6c5ce7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.app-footer a:hover {
+  color: #8a7aff;
+}
+
+.app-footer .fab {
+  font-size: 18px;
+}
+
+.made-with-love {
+  color: #ec4899;
+}
