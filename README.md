@@ -1,6 +1,7 @@
 # 📊 Excel Encia - Asistente de Fórmulas
 
-![Preview](preview.png)
+![{BBCCCE6B-7D25-443D-9A92-E45CD8BE9BBD}](https://github.com/user-attachments/assets/97548fa2-9376-40ad-ad93-690b5f716f16)
+
 
 Asistente IA especializado en generar fórmulas avanzadas de Excel con interfaz amigable.
 
